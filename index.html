@@ -23,96 +23,89 @@
       <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
    </head>
    <body>
-      <!-- Top content -->
-      <div class="top-content">
-         <div class="inner-bg">
-            <div class="container">
-               <div class="row">
-                  <div class="description">
-                     <h1>Freelancer Exchange Service</h1>
-                  </div>
-               </div>
-            </div>
-            <div class="form-box">
-               <div class="form-bottom">
-                  <div class="form-top-center">
-                     <div class="btn-group " data-toggle="buttons">
-                        <form action="dashboard.html" form role="form"  method="get" class="login-form">
-                           <div class="btn-group-horizontal" data-toggle="buttons">
-                              <label class="btn active">
-                              <input type="radio" name='options' value="Customer" required="required">
-                              <i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i>
-                              <span>Customer</span>
-                              </label>
-                              <label class="btn">
-                              <input type="radio" name='options' value="Freelancer" required="required">
-                              <i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i>
-                              <span>Freelancer</span>
-                              </label>
-                           </div>
+      <div id="gradient">
+         <!-- Top content -->
+         <div class="top-content">
+            <div class="inner-bg">
+               <div class="container">
+                  <div class="row">
+                     <div class="description">
+                        <h1>Freelancer Exchange Service</h1>
                      </div>
                   </div>
-                  <div class="form-top-left">
-                  <h3>Login to our site</h3>
-                  <p>Enter username and password to log on, or <a href="registration.html">register</a></p>
+               </div>
+               <div class="form-box">
+                  <div class="form-bottom">
+                     <div class="form-top-center">
+                        <div class="switch-field">
+                           <input type="radio" id="switch_left" name="options" value="customer" />
+                           <label for="switch_left">Customer</label>
+                           <input type="radio" id="switch_right" name="options" value="freelancer" />
+                           <label for="switch_right">Freelancer</label>
+                        </div>
+                        <div class="btn-group " data-toggle="buttons">
+                           <form action="dashboard.html" form role="form"  method="get" class="login-form">
+                        </div>
+                     </div>
+                     <div class="form-top-left">
+                     <h3>Login to our site</h3>
+                     <p>Enter username and password to log on, or <a href="registration.html">register</a></p>
+                     </div>
+                     <div class="form-top-right">
+                     <i class="fa fa-key"></i>
+                     </div>
                   </div>
-                  <div class="form-top-right">
-                  <i class="fa fa-key"></i>
+                  <div class="form-bottom">
+                  <div class="form-group">
+                  <label class="sr-only" for="form-username">Username</label>
+                  <input type="text" required name="form-username" value="" placeholder="Username..." class="form-username form-control" id="username">
+                  </div>
+                  <div class="form-group">
+                  <label class="sr-only" for="form-password">Password</label>
+                  <input type="password" required name="form-password" value="" placeholder="Password..." class="form-password form-control" id="password">
+                  </div>
+                  <button type="submit" onClick="store();" class="btn" >Sign in!</button>
+                  </form>
                   </div>
                </div>
-               <div class="form-bottom">
-               <div class="form-group">
-               <label class="sr-only" for="form-username">Username</label>
-               <input type="text" required name="form-username" value="" placeholder="Username..." class="form-username form-control" id="username">
-               </div>
-               <div class="form-group">
-               <label class="sr-only" for="form-password">Password</label>
-               <input type="password" required name="form-password" value="" placeholder="Password..." class="form-password form-control" id="password">
-               </div>
-               <button type="submit" onClick="store();" class="btn" >Sign in!</button>
-               </form>
-               </div>
-            </div>
-            <div class="social-login">
-               <div class="description">
-                  <h1>...or login with:</h1>
-                  </description>
-                  <div class="social-login-buttons">
-                     <a class="btn btn-link-1 btn-link-1-facebook" href="dashboard.html">
-                     <i class="fa fa-facebook"></i> Facebook
-                     </a>
-                     <a class="btn btn-link-1 btn-link-1-twitter" href="dashboard.html">
-                     <i class="fa fa-twitter"></i> Twitter
-                     </a>
-                     <a class="btn btn-link-1 btn-link-1-google-plus" href="dashboard.html">
-                     <i class="fa fa-google-plus"></i> Google Plus
-                     </a>
+               <div class="social-login">
+                  <div class="description">
+                     <h1>...or login with:</h1>
+                     </description>
+                     <div class="social-login-buttons">
+                        <a class="btn btn-link-1 btn-link-1-facebook" href="dashboard.html">
+                        <i class="fa fa-facebook"></i> Facebook
+                        </a>
+                        <a class="btn btn-link-1 btn-link-1-twitter" href="dashboard.html">
+                        <i class="fa fa-twitter"></i> Twitter
+                        </a>
+                        <a class="btn btn-link-1 btn-link-1-google-plus" href="dashboard.html">
+                        <i class="fa fa-google-plus"></i> Google Plus
+                        </a>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
-      </div>
+         <h5>Made by Students at
+            <a href="http://iot.lviv.ua" target="_blank"><strong>IOT</strong></a> having a lot of fun.
+            <i class="fa fa-smile-o"></i>
+         </h5>
       </div>
       </div>
       </div>
       <!-- Footer -->
-      <footer>
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-8 col-sm-offset-2">
-                  <div class="footer-border"></div>
-                  <p>Made by Students at <a href="http://iot.lviv.ua" target="_blank"><strong>IOT</strong></a> having a lot of fun. <i class="fa fa-smile-o"></i></p>
-               </div>
-            </div>
-         </div>
+      <footer
       </footer>
       <!-- Javascript -->
       <script src="js/jquery-1.11.1.min.js"></script>
       <script src="bootstrap/js/bootstrap.min.js"></script>
       <script src="js/auth.js"></script>
+      <script src="js/background.js"></script>
       <!--  <script src="js/scripts.js"></script> -->
       <!--[if lt IE 10]>
       <script src="assets/js/placeholder.js"></script>
       <![endif]-->
+      </div>
    </body>
 </html>

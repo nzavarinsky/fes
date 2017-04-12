@@ -11,9 +11,11 @@
       <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
       <link rel="stylesheet" href="css/form-elements.css">
       <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/registration.css">
       <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
       <script src="js/register.js"></script>
       <script src="js/jquery-1.11.1.min.js"></script>
+      <script src="js/background.js"></script>
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
       <!--[if lt IE 9]>
@@ -27,61 +29,63 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
       <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
    </head>
-   <div class="form-box">
-      <div class="form-top">
-         <div class="form-top-center">
-            <div class="btn-group" data-toggle="buttons">
-               <form action="dashboard.html" form role="form" onsubmit="return check()"  method="get" class="login-form">
-               <div class="btn-group-horizontal" data-toggle="buttons">
-                  <label class="btn active">
-                  <input type="radio" name='typeofUser' value="Customer" required="required">
-                  <i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i>
-                  <span>Customer</span>
-                  </label>
-                  <label class="btn">
-                  <input type="radio" name='typeofUser' value="Freelancer" required="required">
-                  <i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i>
-                  <span>Freelancer</span>
-                  </label>
+   <body>
+      <div id="gradient">
+         <div class="go-back">
+            <input type="button" value="Go Back!" class="batn"  onclick="history.back(-1)" />
+         </div>
+         <div class="form-box">
+            <div class="form-top">
+               <div class="form-top-center">
+                  <div class="btn-group" data-toggle="buttons">
+                     <form action="dashboard.html" form role="form" onsubmit="return check()"  method="get" class="login-form">
+                     <div class="switch-field">
+                        <input type="radio" id="switch_left" name="options" value="customer" />
+                        <label for="switch_left">Customer</label>
+                        <input type="radio" id="switch_right" name="options" value="freelancer" />
+                        <label for="switch_right">Freelancer</label>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-top-left">
+                  <h3>Sign up now</h3>
+                  <p>Fill in the form below to get instant access:</p>
+               </div>
+               <div class="form-top-right">
+                  <i class="fa fa-pencil"></i>
                </div>
             </div>
-         </div>
-         <div class="form-top-left">
-            <h3>Sign up now</h3>
-            <p>Fill in the form below to get instant access:</p>
-         </div>
-         <div class="form-top-right">
-            <i class="fa fa-pencil"></i>
+            <div class="form-bottom">
+               <form role="form" action="" method="post" class="registration-form">
+               <div class="form-group">
+                  <label class="sr-only" for="form-first-name">First name</label>
+                  <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="firstname" required>
+               </div>
+               <div class="form-group">
+                  <label class="sr-only" for="form-last-name">Last name</label>
+                  <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="lastname" required>
+               </div>
+               <div class="form-group">
+                  <label class="sr-only" for="form-email">Email</label>
+                  <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="email" required>
+               </div>
+               <div class="form-group">
+                  <label class="sr-only" for="form-email">Password</label>
+                  <input type="password" placeholder="Password" class="form-email form-control" id="password" required
+                     pattern=".{0}|.{5,20}" required title="Password must be be 5 to 10 symbols length">
+               </div>
+               <div class="form-group">
+                  <label class="sr-only" for="form-email">Confirm password</label>
+                  <input type="password" placeholder="Confirm password" class="form-email form-control" id="confirm_password" required>
+               </div>
+               <div class="form-group">
+                  <label class="sr-only" for="form-about-yourself">About yourself</label>
+                  <textarea name="form-about-yourself" placeholder="About yourself..."
+                     class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+               </div>
+               <button type="submit" class="btn" onClick="storeReg();">Sign me up!</button>
+            </div>
          </div>
       </div>
-      <div class="form-bottom">
-         <form role="form" action="" method="post" class="registration-form">
-         <div class="form-group">
-            <label class="sr-only" for="form-first-name">First name</label>
-            <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="firstname" required>
-         </div>
-         <div class="form-group">
-            <label class="sr-only" for="form-last-name">Last name</label>
-            <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="lastname" required>
-         </div>
-         <div class="form-group">
-            <label class="sr-only" for="form-email">Email</label>
-            <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="email" required>
-         </div>
-         <div class="form-group">
-            <label class="sr-only" for="form-email">Password</label>
-            <input type="password" placeholder="Password" class="form-email form-control" id="password" required
-               pattern=".{0}|.{5,20}" required title="Password must be be 5 to 10 symbols length">
-         </div>
-         <div class="form-group">
-            <label class="sr-only" for="form-email">Confirm password</label>
-            <input type="password" placeholder="Confirm password" class="form-email form-control" id="confirm_password" required>
-         </div>
-         <div class="form-group">
-            <label class="sr-only" for="form-about-yourself">About yourself</label>
-            <textarea name="form-about-yourself" placeholder="About yourself..."
-               class="form-about-yourself form-control" id="form-about-yourself"></textarea>
-         </div>
-         <button type="submit" class="btn" onClick="storeReg();">Sign me up!</button>
-      </div>
-   </div>
+   </body>
+</html>
